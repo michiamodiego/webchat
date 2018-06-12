@@ -76,6 +76,7 @@ app.controller('chatController', function($rootScope, $scope, $interval, chatSer
 	$scope.messageList = [ ];
 	$scope.userList = [ ];
 	$scope.chatting = false;
+	$scope.scrolling = true;
 
 	var chatModel = ChatModel($scope);
 
@@ -93,7 +94,10 @@ app.controller('chatController', function($rootScope, $scope, $interval, chatSer
 
 					$scope.changeUsername = function() {
 
-						if(chatModel.getUsername() != chatModel.getOldUsername()) {
+						if(
+								chatModel.getUsername().trim() != "" && 
+								chatModel.getUsername() != chatModel.getOldUsername()
+						) {
 
 							simpleChatService
 							.pushChangeUsernameChatMessage(
@@ -110,10 +114,7 @@ app.controller('chatController', function($rootScope, $scope, $interval, chatSer
 
 						if(message.trim() == "") {
 
-							chatModel.addMessage("Il messaggio è vuoto.");
-
 							return;
-
 
 						}
 
@@ -153,9 +154,13 @@ app.controller('chatController', function($rootScope, $scope, $interval, chatSer
 
 					$interval(function() {
 
-						$("#messageListPanel").scrollTop(
-								$("#messageListPanel").height()*2
-						);
+						if($scope.scrolling) {
+
+							$("#messageListPanel").scrollTop(
+									$("#messageListPanel").height()*2
+							);
+
+						}
 
 					}, 0);
 

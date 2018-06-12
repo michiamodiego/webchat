@@ -39,7 +39,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 		registry
 		.addResourceHandler("/resources/**")
-		.addResourceLocations("/WEB-INF/resources/");
+		.addResourceLocations("/WEB-INF/resources/")
+		.setCachePeriod(500);
 
 	}
 
