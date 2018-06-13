@@ -14,12 +14,12 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import com.dsantoro.example.webchat.websockethandler.model.ChatMessageUtils;
 import com.dsantoro.example.webchat.websockethandler.model.ChatUserSession;
 import com.dsantoro.example.webchat.websockethandler.model.chatcontext.ChatContext;
 import com.dsantoro.example.webchat.websockethandler.model.chatcontext.ChatContextEvent;
 import com.dsantoro.example.webchat.websockethandler.model.chatcontext.ChatContextEventType;
 import com.dsantoro.example.webchat.websockethandler.model.chatmessagehandler.ChatMessageHandler;
+import com.dsantoro.example.webchat.websockethandler.model.utils.ChatMessageUtils;
 
 @Component
 public class TextBasedChatHandler extends TextWebSocketHandler implements Observer {

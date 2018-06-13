@@ -71,7 +71,7 @@ public class ChatUserSession {
 
 		} catch (IOException e) {
 
-			logger.error("#ERROR ", e);
+			logger.error("#EXPECTED_ERROR ", e);
 
 		}
 

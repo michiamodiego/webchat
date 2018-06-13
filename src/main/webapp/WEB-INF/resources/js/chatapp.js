@@ -166,7 +166,7 @@ app.controller('chatController', function($rootScope, $scope, $interval, chatSer
 
 				}, function(e) {
 
-					console.log(e);
+					chatModel.addMessage("Impossibile collegarsi al server.");
 
 				}
 		);

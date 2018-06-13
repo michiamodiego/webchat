@@ -6,10 +6,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.MessageSource;
 
-import com.dsantoro.example.webchat.websockethandler.model.ChatMessageUtils;
 import com.dsantoro.example.webchat.websockethandler.model.ChatUserSession;
 import com.dsantoro.example.webchat.websockethandler.model.chatcontext.ChatContext;
 import com.dsantoro.example.webchat.websockethandler.model.chatmessageprocessor.SimpleChatMessageProcessor;
+import com.dsantoro.example.webchat.websockethandler.model.utils.ChatMessageUtils;
 
 public class WhoIAmChatMessageProcessor extends SimpleChatMessageProcessor {
 

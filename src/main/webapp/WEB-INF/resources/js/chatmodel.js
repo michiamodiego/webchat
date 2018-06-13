@@ -307,9 +307,6 @@ function ChatMessageProcessorDelegate(chatService, chatModel, data) {
 
 function PvtMessageProcessorDelegate(chatService, chatModel, data) {
 
-	console.log(data[1]);
-	console.log(chatModel.getUsername());
-
 	if(chatModel.getUsername() == data[1]) {
 
 		chatModel
@@ -394,8 +391,6 @@ var ChatService = function(webSocket) {
 				})
 				.join(" ")
 				.trim();
-
-				console.log(chatCommand);
 
 				webSocket.send(
 						chatCommand
@@ -541,19 +536,6 @@ var WebSocketFactory = function(endpoint, callback) {
 	};
 
 };
-
-function ChatModel() {
-
-	return {
-		"oldUsername": null, 
-		"username": null, 
-		"message": null, 
-		"userList": [], 
-		"messageList": [], 
-		"chatting": false
-	};
-
-}
 
 function ChatModel($scope) {
 
