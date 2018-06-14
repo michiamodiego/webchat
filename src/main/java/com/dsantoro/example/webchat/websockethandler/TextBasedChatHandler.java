@@ -84,7 +84,7 @@ public class TextBasedChatHandler extends TextWebSocketHandler implements Observ
 	public void handleTransportError(WebSocketSession session, Throwable exception)
 			throws Exception {
 
-		logger.debug("#ERROR ", exception);
+		logger.debug("#EXPECTED_ERROR ", exception);
 
 	}
 

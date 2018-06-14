@@ -26,7 +26,7 @@ import com.dsantoro.example.webchat.websockethandler.model.usernamegenerator.Use
 public class ChatContext extends Observable {
 
 	// Observable here is implemented as a push model, no pull model: setChanged method will never be used and hasChanged method will always return false
-	// The choice to make ChatContext a push model system is derived from the fact that ChatContext is used in a multi-thread environemnt and there is no need to manage the observerable'state through synchronized methods
+	// The choice to make ChatContext a push model system is derived from the fact that ChatContext is used in a multi-thread environment and there is no need to manage the observerable'state through synchronized methods
 	// Unfortunately the Observable interface provided in java.util is dirty and it implements a push model and pull model at the same time
 
 	private static final Logger logger = LogManager.getLogger(ChatContext.class);

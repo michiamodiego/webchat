@@ -45,19 +45,19 @@ public class ChatUserSession {
 
 	}
 
-	public boolean send(String message) {
+	public void send(String message) {
 
 		try {
 
-			this.webSocketSession.sendMessage(new TextMessage(message));
+			if(!isClosed()) {
 
-			return true;
+				webSocketSession.sendMessage(new TextMessage(message));
+
+			}
 
 		} catch(IOException e) {
 
-			logger.error("#ERROR ", e);
-
-			return false;
+			logger.error("#EXPECTED_ERROR ", e);
 
 		}
 
