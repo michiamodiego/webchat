@@ -8,7 +8,7 @@ public class ChatMessageUtils {
 
 		return new ChatMessageBuilder()
 				.addMessagePart("info", message)
-				.toString();
+				.getChatMessage();
 
 	}
 
@@ -20,7 +20,7 @@ public class ChatMessageUtils {
 						.stream()
 						.reduce((u1, u2) -> u1 + ", " + u2)
 						.get()
-						).toString();
+						).getChatMessage();
 
 	}
 
@@ -29,7 +29,7 @@ public class ChatMessageUtils {
 		return new ChatMessageBuilder()
 				.addMessagePart("message", message)
 				.addMessagePart("sender", username)
-				.toString();
+				.getChatMessage();
 
 	}
 
@@ -37,7 +37,7 @@ public class ChatMessageUtils {
 
 		return new ChatMessageBuilder()
 				.addMessagePart("error", message)
-				.toString();
+				.getChatMessage();
 
 	}
 
@@ -47,7 +47,7 @@ public class ChatMessageUtils {
 				.addMessagePart("pvt", messageToSend)
 				.addMessagePart("sender", sender)
 				.addMessagePart("recipient", recipient)
-				.toString();
+				.getChatMessage();
 
 	}
 
@@ -55,7 +55,7 @@ public class ChatMessageUtils {
 
 		return new ChatMessageBuilder()
 				.addMessagePart("whoiam", username)
-				.toString();
+				.getChatMessage();
 
 	}
 
@@ -63,7 +63,7 @@ public class ChatMessageUtils {
 
 		return new ChatMessageBuilder()
 				.addMessagePart("username", username)
-				.toString();
+				.getChatMessage();
 
 	}
 
@@ -71,7 +71,7 @@ public class ChatMessageUtils {
 
 		return new ChatMessageBuilder()
 				.addMessagePart("join", username)
-				.toString();
+				.getChatMessage();
 
 	}
 
@@ -79,7 +79,7 @@ public class ChatMessageUtils {
 
 		return new ChatMessageBuilder()
 				.addMessagePart("quit", username)
-				.toString();
+				.getChatMessage();
 
 	}
 

@@ -24,7 +24,7 @@ public class ChatMessageBuilder {
 
 	}
 
-	public String toString() {
+	public String getChatMessage() {
 
 		String chatMessage = 
 				Arrays.asList(
